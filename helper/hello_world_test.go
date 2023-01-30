@@ -14,7 +14,7 @@ import (
 func TestMain(m *testing.M) {
 	fmt.Println("Before Unit Test")
 
-	m.Run()
+	m.Run() // Running all testing
 
 	fmt.Println("After Unit Test")
 }
@@ -65,4 +65,17 @@ func TestSkip(t *testing.T) {
 
 	result := HelloWorld("Taufiq")
 	require.Equal(t, "Hello Taufiq", result, "Result must be 'Hello Taufiq'")
+}
+
+// Test with SubTest
+
+func TestSubTest(t *testing.T) {
+	t.Run("Sub Test 1", func(t *testing.T) {
+		result := HelloWorld("Taufiq")
+		require.Equal(t, "Hello Taufiq", result, "Result must be 'Hello Taufiq'")
+	})
+	t.Run("Sub Test 2", func(t *testing.T) {
+		result := HelloWorld("Kurniawan")
+		require.Equal(t, "Hello Kurniawan", result, "Result must be 'Hello Kurniawan'")
+	})
 }

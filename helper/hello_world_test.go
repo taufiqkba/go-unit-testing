@@ -26,3 +26,8 @@ func TestHelloWorldKurniawan(t *testing.T) {
 
 	fmt.Println("Test DONE 2")
 }
+
+// Test with Assertion
+func TestHelloWorldAssertion(t *testing.T) {
+
+}

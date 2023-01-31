@@ -112,3 +112,11 @@ func TestHelloWorldTable(t *testing.T) {
 		})
 	}
 }
+
+// Benchmark test
+
+func BenchmarkHelloWorld(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		HelloWorld("Taufiq")
+	}
+}
